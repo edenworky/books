@@ -92,3 +92,11 @@ const TableOfContents: ComponentOptions<Vue> = {
 
 export default TableOfContents
 </script>
+
+<style lang="scss" scoped>
+@media print {
+  .table-of-contents > ul {
+    margin-block-start: -.25rem;
+  }
+}
+</style>

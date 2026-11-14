@@ -2,6 +2,7 @@
   <span>
     <v-popover placement="top-end"
                trigger="click"
+               :container="false"
                :content="$slots.default">
       <sup class="tooltip tooltip-target">*</sup>
 
@@ -31,7 +32,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .v-popover {
   display: inline;
 }
@@ -40,7 +41,7 @@ export default {
   display: none;
 }
 
-.tooltip {
+:deep(.tooltip) {
   cursor: pointer;
   font-size: 1.3em;
   line-height: 0;
@@ -72,26 +73,11 @@ export default {
     margin-bottom: 5px;
 
     .tooltip-arrow {
-      border-width: 5px 5px 0 5px;
+      border-width: 5px 5px 0;
       border-left-color: transparent !important;
       border-right-color: transparent !important;
       border-bottom-color: transparent !important;
       bottom: -5px;
-      left: calc(50% - 5px);
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
-
-  &[x-placement^="bottom"] {
-    margin-top: 5px;
-
-    .tooltip-arrow {
-      border-width: 0 5px 5px 5px;
-      border-left-color: transparent !important;
-      border-right-color: transparent !important;
-      border-top-color: transparent !important;
-      top: -5px;
       left: calc(50% - 5px);
       margin-top: 0;
       margin-bottom: 0;

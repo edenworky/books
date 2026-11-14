@@ -54,7 +54,7 @@ layout: ReadingLayout
 דוד ישראל כהן.
 תל אביב, ינואר 2018.
 
-<Img :path="'derech-hapeima/david-symbol.jpg'" alt="סמל החיים הסינגולרי" class="print-dont-center"></Img>
+<Img :path="'derech-hapeima/david-symbol.jpg'" alt="סמל החיים הסינגולרי" print-dont-center></Img>
 
 <aside><i>האיורים בספר מאת המחבר</i></aside>
 
@@ -796,7 +796,7 @@ layout: ReadingLayout
 
 </Poem>
 
-<Img :path="'derech-hapeima/forcefulness.jpg'" alt="להיות עצמך" class="print-fill"></Img>
+<Img :path="'derech-hapeima/forcefulness.jpg'" alt="להיות עצמך" print-fill></Img>
 
 # פרק ג׳ - דרך. סינתזה
 

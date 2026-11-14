@@ -1,0 +1,31 @@
+.medium-zoom-caption-overlay {
+  // Layout
+  position: fixed;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 101;
+
+  // Style
+  background-color: rgba(0, 0, 0, 80%);
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-align: center;
+  pointer-events: none;
+
+  // Transition (matching medium-zoom's default 300ms transition)
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+  will-change: opacity;
+
+  &.is-visible {
+    opacity: 1;
+  }
+}
+
+/* disable scrolling that closes the zoom backdrop */
+body:has(.medium-zoom-caption-overlay) {
+  overflow-y: hidden;
+}

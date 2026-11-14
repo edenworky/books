@@ -1,0 +1,22 @@
+.book-title,
+.book-subtitle,
+.books-list > p {
+  text-align: center;
+}
+  
+.book-title {
+  font-size: 6vw;
+}
+
+.book-subtitle {
+  font-size: 5vw;
+}
+  
+.books-list {
+  font-family: $base-font-family;
+  font-size: xxx-large;
+  
+  > p {
+    margin: 0;
+  }
+}

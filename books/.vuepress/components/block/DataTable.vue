@@ -42,11 +42,31 @@
 </template>
 
 <script lang="ts">
+import {PropType} from 'vue'
+
+export interface ColumnMeta {
+  type?: 'latex' | 'latexImage' | (string & unknown)
+}
+
+export interface TableColumn {
+  'title': string
+  'field': string
+  'visible': boolean
+  'centered'?: boolean
+  'sticky'?: boolean
+  'numeric'?: boolean
+  'cell-class'?: string
+  'meta'?: ColumnMeta
+}
+
+export type TableCellValue = string | string[] | null
+export type TableRow = Record<string, TableCellValue>
+
 export default {
   props: {
     id     : {type: String, required: false, default: ''},
-    data   : {type: Array, required: true},
-    columns: {type: Array, required: true},
+    data   : {type: Array as PropType<TableRow[]>, required: true},
+    columns: {type: Array as PropType<TableColumn[]>, required: true},
   },
 }
 </script>
@@ -54,8 +74,7 @@ export default {
 <style lang="scss" scoped>
 :deep(.b-table) {
   .table {
-    td.is-sticky,
-    th.is-sticky {
+    .is-sticky {
       right: 0;
     }
 
@@ -63,39 +82,39 @@ export default {
       justify-content: center;
     }
 
-    td.has-text-centered {
+    .has-text-centered {
       vertical-align: middle;
       text-align: center;
 
-      @media (max-width: 768px), print {
+      @media (width <= 768px), print {
         display: flex;
         align-items: center;
       }
     }
 
-    td.right-aligned {
+    .right-aligned {
       text-align: right;
       vertical-align: middle;
     }
   }
 
   > .table-wrapper:not(:last-child) {
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
       margin-bottom: 0;
     }
   }
 
-  .table-wrapper.has-mobile-cards tr:not(.detail):not(.is-empty):not(.table-footer) td {
-    &::before {
+  .table-wrapper.has-mobile-cards tr:not(.detail, .is-empty, .table-footer) {
+    td::before {
       margin: auto 0;
 
-      @media (max-width: 768px), print {
+      @media (width <= 768px), print {
         text-align: right;
       }
     }
 
-    &.right-aligned div {
-      @media (max-width: 768px), print {
+    .right-aligned div {
+      @media (width <= 768px), print {
         margin-right: 1em;
       }
     }
@@ -127,16 +146,17 @@ export default {
   flex: 0 1 30%;
   align-items: center;
 
-  @media (max-width: 768px), print {
+  @media (width <= 768px), print {
     flex-direction: row;
   }
 
-  & > img {
+  > img {
     margin-inline: 1em 0;
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       max-width: 50% !important;
     }
+
     @media print {
       max-width: 75% !important;
     }
@@ -144,60 +164,63 @@ export default {
 }
 
 /* Adapted from ~node_modules/buefy/src/scss/components/_table.scss */
+
 @mixin table-cards {
   :deep(.b-table) {
-    .table-wrapper {
-      &.has-sticky-header {
-        height: initial;
-        overflow-y: initial;
-      }
+    .table-wrapper.has-sticky-header {
+      height: initial;
+      overflow-y: initial;
     }
 
     .table {
       background-color: transparent;
+    }
 
-      thead {
-        tr {
-          box-shadow: none;
-          border-width: 0;
-          th {
-            display: none;
-          }
-        }
+    thead tr {
+      box-shadow: none;
+      border-width: 0;
+    }
+
+    th {
+      display: none;
+    }
+
+    tbody tr {
+      box-shadow: 0 2px 3px rgba(0,0,0,10%), 0 0 0 1px rgba(0,0,0,10%);
+      max-width: 100%;
+      position: relative;
+      display: block;
+    }
+
+    td {
+      border: 0;
+      display: flex;
+      width: auto;
+      justify-content: space-between;
+      text-align: right;
+      border-bottom: 1px solid rgb(245, 245, 245);
+
+      &::before {
+        content: attr(data-label);
+        font-weight: 600;
+        padding-right: 0.5em;
+        text-align: left;
       }
 
-      tr {
-        box-shadow: 0 2px 3px rgba(black, 0.1), 0 0 0 1px rgba(black, 0.1);
-        max-width: 100%;
-        position: relative;
-        display: block;
-        td {
-          border: 0;
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
 
-          display: flex;
-          width: auto;
-          justify-content: space-between;
-          text-align: right;
-          border-bottom: 1px solid hsl(0, 0%, 96%);
-          &:before {
-            content: attr(data-label);
-            font-weight: 600;
-            padding-right: 0.5em;
-            text-align: left;
-          }
-          &:last-child {
-            border-bottom: 0;
-          }
-        }
-        &:not(:last-child) {
-          margin-bottom: 1rem;
-        }
-        &:not([class*="is-"]) {
-          background: white;
-          &:hover {
-            background-color: white;
-          }
-        }
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    &:not([class*="is-"]) {
+      background: white;
+
+      &:hover {
+        background-color: white;
       }
     }
   }

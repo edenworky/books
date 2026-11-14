@@ -20,6 +20,7 @@ export const markdownConfig: MarkdownConfig = {
 
     md.use(markdownItAttrs, {allowedAttributes: ['dir']})
 
+    addContainer(md, 'full-width')
     addContainer(md, 'hebrew-list')
   },
 }

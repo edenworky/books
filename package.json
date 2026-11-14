@@ -12,7 +12,7 @@
     "zip-offline": "node scripts/zip-offline.js",
     "lint:code": "eslint --ext .js,.cjs,.ts,.vue .",
     "lint:style": "stylelint \"books/.vuepress/**/*.{vue,scss}\"",
-    "lint:style:watch": "chokidar \".stylelintrc.json\" \"books/.vuepress/**/*.{vue,scss}\" --initial -c \"node scripts/watch-stylelint.js\"",
+    "lint:style:watch": "chokidar \".stylelintrc.cjs\" \"books/.vuepress/**/*.{vue,scss}\" --initial -c \"node scripts/watch-stylelint.js\"",
     "lint": "npm run lint:style && npm run lint:code",
     "build": "vuepress build books",
     "postbuild": "npm run generate-pdfs",

@@ -32,7 +32,7 @@ export default {
   align-items: center;
 }
 
-a.navbar-item, .navbar-link {
+.navbar-item, .navbar-link {
   font-size: 1.25rem;
   text-decoration: none;
   color: white;

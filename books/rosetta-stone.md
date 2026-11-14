@@ -15,7 +15,7 @@ layout: ReadingLayout
 
 Using <Link :href="'/composition-book/'">Sefer Yetzira</Link> is an ability to create. The intention must be pure. The person must act as a king. The legend of qualities acts as an index to the understanding of life and nature. It integrates the Art of Composition of the formation - from personal completion to collective completion. {dir="ltr"}
 
-<Img :path="'rosetta-stone/legend-composition.jpg'" alt="מיפוי אותיות וספירות על גבי המרכבה בכתב יד" class="cover-image print-fill" />
+<Img :path="'rosetta-stone/legend-composition.jpg'" alt="מיפוי אותיות וספירות על גבי המרכבה בכתב יד" class="cover-image" print-fill />
 
 יש עמודים שהם האנכיים והם מהווים ציר אופקי - או המציאות. יש שורות שהן האופקיות והן מהוות ציר אנכי - או האמת. מכפלה של אמת במציאות יוצרת שדה. המציאות היא הזמן, האמת היא הנפש, השדה הוא המרחב הוא העולם. ישנו סובייקט שהוא המרכבה וישנו אובייקט שהוא מערכת החיים. תנועת המרכבה במרכז המערכת יוצרת את דינמיקת ערכי השדות - או איכויות החיים.
 
@@ -25,4 +25,6 @@ Columns are vertical and they form a horizontal axis - or reality. Rows are hori
 
 <div class="page-break"></div>
 
-<RosettaStone :id="'table-of-qualities'" class="regular-layout" />
+::: full-width
+<RosettaStone :id="'table-of-qualities'" />
+:::

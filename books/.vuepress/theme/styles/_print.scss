@@ -1,11 +1,11 @@
+.page-break {
+  page-break-after: right;
+}
+
 @media print {
   @page {
-    size: A5 portrait;
+    size: a5 portrait;
     margin: 10mm 8mm;
-  }
-
-  .page-break {
-    page-break-after: right;
   }
   
   .navbar,
@@ -21,14 +21,6 @@
 
   .main-container {
     max-width: 100% !important;
-  }
-
-  .table-of-contents > ul {
-    margin-block-start: -.25rem;
-  }
-
-  .blockquote-container {
-    break-inside: avoid;
   }
 
   p { 
@@ -48,52 +40,5 @@
 
   h1, h2, h3 {
     break-after: avoid;
-  }
-
-  img {
-    max-height: 55vh !important;
-    display: block;
-    margin-inline: auto;
-
-    &.print-dont-center {
-      margin-inline: 0;
-    }
-
-    &.print-fill {
-      max-height: 90vh !important;
-    }
-  }
-
-  .derech-hapeima {
-    .cover-image {
-      max-height: 68vh !important;
-    }
-  }
-
-  .mishvaot-hapeima {
-    h2 {
-      font-size: 1.485rem;
-    }
-    
-    .finale-equations {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-  }
-
-  .rosetta-stone {
-    .regular-layout {
-      margin: 0;
-    }
-
-    .column-toggles,
-    .go-down-arrow {
-      display: none !important;
-    }
-
-    .table > tbody > tr {
-      break-before: page;
-    }
   }
 }

@@ -1,0 +1,26 @@
+.main-heading {
+  img {
+    width:150px;
+    float:left;
+  }
+
+  h1 {
+    width: 75%;
+  }
+
+  h2 {
+    width: 75%;
+  }
+}
+
+@media print {
+  h2 {
+    font-size: 1.485rem;
+  }
+    
+  .finale-equations {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

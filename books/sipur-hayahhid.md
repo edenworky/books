@@ -281,7 +281,7 @@ customFont: Shofar
 
 מתוקה וזכה כטל.
 
-<Img :path="'sipur-hayahhid/hafamily.jpg'" alt="המשפחה" class="print-fill"></Img>
+<Img :path="'sipur-hayahhid/hafamily.jpg'" alt="המשפחה" print-fill></Img>
 
 ## פרק 9 - פרי החיים
 
@@ -409,13 +409,13 @@ customFont: Shofar
 
 ישנם 22 עקרונות - הא׳-ב׳ של ההדרכה המהותית ע״פ הטבלה שלפניכם:
 
-<Img :path="'sipur-hayahhid/principles-pulsetherapy.jpg'" alt="עקרונות הפולס-תרפיה" class="print-fill"></Img>
+<Img :path="'sipur-hayahhid/principles-pulsetherapy.jpg'" alt="עקרונות הפולס-תרפיה" print-fill></Img>
 
 ישנה אסטרטגיית ריפוי כללית - ׳אסטרטגיית דוד׳ - ע״פ השירטוט שלפניכם.
 
 התנועה הפועמת היא מחזורית, משתנה, ומרככת, כמנגנון נשימה בין קטבי החיים. העיקרון הראשי הוא להחדיר תנועה זו לכל איזור פגוע. כל איזור של סטגנציה, עימות או פער. בכל רובד חיים. הפנימי, הסביבתי, היחסים, הכלכלה. להכניס תנועת טאי-צ׳י של אומנות המפגש. של תקשורת מרפאת. ולהגיע עם הזמן לנוכחות מרפאת. ללב נובע. לתנועה טבעית.
 
-<Img :path="'sipur-hayahhid/hacreation.jpg'" alt="למה? היצירה" class="print-fill"></Img>
+<Img :path="'sipur-hayahhid/hacreation.jpg'" alt="למה? היצירה" print-fill></Img>
 
 לרדת מהראש ועבודתו המתישה, לכיוון הלב. ע״י שיחרור החשיבה. כמו־כן להעלות את המשקעים המודחקים מתחתית הבטן גם כן ללב. ולשחרר אותם בחוויה, ברגש, במודעות, בהכלה.
 
@@ -553,7 +553,7 @@ customFont: Shofar
 
 יש מעשה מרכבה של 22 אותיות ו-10 ספירות - ל״ב - המרכיבות את מבנה הממלכה - המ.ב.
 
-<Img :path="'sipur-hayahhid/kingdom-spheres.jpg'" alt="מעגלי הממלכה" class="print-fill"></Img>
+<Img :path="'sipur-hayahhid/kingdom-spheres.jpg'" alt="מעגלי הממלכה" print-fill></Img>
 
 יש בני אדם פשוטים על הארץ, עם חיים טובים. עם נפש בריאה בגוף בריא.
 
@@ -690,7 +690,7 @@ customFont: Shofar
 
 וזו תמיד הייתה השליחות
 
-<Img :path="'sipur-hayahhid/hame.jpg'" alt="מי? האני" class="print-fill"></Img>
-<Img :path="'sipur-hayahhid/hahome.jpg'" alt="הבית" class="print-fill"></Img>
+<Img :path="'sipur-hayahhid/hame.jpg'" alt="מי? האני" print-fill></Img>
+<Img :path="'sipur-hayahhid/hahome.jpg'" alt="הבית" print-fill></Img>
 
 תם הספר.

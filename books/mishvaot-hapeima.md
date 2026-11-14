@@ -67,11 +67,11 @@ layout: ReadingLayout
 
 ## שרטוט 1: מיפוי המרכבה עפ״י ספר היצירה
 
-<Img :path="'mishvaot-hapeima/merkavah-mapping.jpg'" class="print-fill" alt='ל"ב נתיבות פליאות חכמה ע"ג  האין'></Img>
+<Img :path="'mishvaot-hapeima/merkavah-mapping.jpg'" print-fill alt='ל"ב נתיבות פליאות חכמה ע"ג  האין'></Img>
 
 ## טבלה 1: פירוט ערכי כל האותיות עפ״י ספר היצירה
 
-<Img :path="'mishvaot-hapeima/merkavah-letter-values.jpg'" class="print-fill"  alt="תלת מימדי איכויות האין"></Img>
+<Img :path="'mishvaot-hapeima/merkavah-letter-values.jpg'" print-fill  alt="תלת מימדי איכויות האין"></Img>
 
 כל אוסף הנתונים המרכיבים מרכבה ברגע נתון הוא הצורה של המרכבה. הצורה נקבעת מתוך הפוטנציאליות עפ״י הערכים של כל אחד מהמימדים. 
 
@@ -100,7 +100,7 @@ z נובע ממכפלה של כל ערכי x וy:
 
 ## טבלה 2: ערכי צירי המערכת
 
-<Img :path="'mishvaot-hapeima/system-axes-values.jpg'" class="print-fill" alt="העולם שבין אין לאין"></Img>
+<Img :path="'mishvaot-hapeima/system-axes-values.jpg'" print-fill alt="העולם שבין אין לאין"></Img>
 
 כל נקודה - מרכבה - אחת היא כל הסיפור כולו.
 
@@ -243,7 +243,7 @@ y = עץ החיים, מים, ספירה ארבע
 
 ## שרטוט 3: מיפוי המערכת (או עץ המלך)
 
-<Img :path="'mishvaot-hapeima/system-mapping.jpg'" alt="שנים עשר הענפים ושתים עשרה הממלכות של מערכת לימוד הנפש" class="print-fill"></Img>
+<Img :path="'mishvaot-hapeima/system-mapping.jpg'" alt="שנים עשר הענפים ושתים עשרה הממלכות של מערכת לימוד הנפש" print-fill></Img>
 
 <div class="page-break"></div>
 

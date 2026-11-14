@@ -1,10 +1,9 @@
 ---
 permalink: /
 layout: ReadingLayout
-pageClass: index
+pageClass: home
+customFont: Shofar
 ---
-
-<div class="book-about">
 
 <h1 class="book-title">טבעדינמיקה</h1>
 <h2 class="book-subtitle">הגישה המגשרת</h2>
@@ -23,8 +22,6 @@ pageClass: index
 בכל רבדי החיים של האדם והחברה.
 בזה עוסקת <Link :href="'/slideshow/'">המצגת</Link>.
 זו הטבעדינמיקה
-
-</div>
 
 <div class="page-break"></div>
 

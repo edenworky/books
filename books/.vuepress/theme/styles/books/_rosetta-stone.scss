@@ -1,0 +1,20 @@
+.go-down-arrow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+
+  > img {
+    max-width: 20%;
+  }
+}
+
+@media print {
+  .column-toggles,
+  .go-down-arrow {
+    display: none !important;
+  }
+
+  .table > tbody > tr {
+    break-before: page;
+  }
+}

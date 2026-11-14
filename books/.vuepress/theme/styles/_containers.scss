@@ -1,5 +1,22 @@
-.container {
-  &.hebrew-list>ol {
-    list-style-type: hebrew;
+.container.full-width {
+  margin: 0 1em;
+
+  @media print {
+    margin: 0;
   }
+
+  .reading-layout & {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-sizing: border-box;
+    padding: 0 1em; 
+  }
+}
+
+.container.hebrew-list>ol {
+  list-style-type: hebrew;
 }

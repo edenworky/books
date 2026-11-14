@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Assistant', sans-serif;
+  font-family: $base-font-family;
   font-size: $base-font-size;
   margin: 0;
 }
@@ -31,7 +31,7 @@ h1 {
 }
 
 h2 {
-  font-weight: 700;
+  font-weight: bold;
 }
 
 h3 {

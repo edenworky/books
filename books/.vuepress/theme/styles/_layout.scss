@@ -2,48 +2,35 @@
   direction:rtl;
 
   &[data-font="Shofar"] {
-    font-family: 'Shofar';
+    font-family: "Shofar", serif;
   }
 
   &[data-font="Courier New"] {
-    font-family: 'Courier New';
-    code, pre {
-      font-family: 'Courier New';
+    &, code, pre {
+      font-family: 'Courier New', monospace;
     }
   }
 }
 
-.regular-layout {
-  margin: 0 1em;
-}
-
-.reading-layout {
+%common-layout {
   margin: 0 1em;
 
-  @media (min-width: 659px) {
+  @media (width >= 659px) {
     margin: 0 auto;
     max-width: 60vw;
   }
 
-  @media (min-width: 959px) {
+  @media (width >= 959px) {
     max-width: 40vw;
-  }
-
-  .regular-layout {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-
-    box-sizing: border-box;
-    padding: 0 1em;
   }
 }
 
+.reading-layout {
+  @extend %common-layout; 
+}
+
 .english-reading-layout {
-  @extend .reading-layout;
+  @extend %common-layout;
   
   direction: ltr;
 }

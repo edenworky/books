@@ -14,10 +14,8 @@ export default {
 #app .go-to-top {
   left: 2.5rem;
   right: auto;
-}
 
-@media (max-width: 959px) {
-  #app .go-to-top {
+  @media (width <= 959px) {
     display: block;
   }
 }

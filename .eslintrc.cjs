@@ -18,7 +18,10 @@ module.exports = {
     'plugin:@typescript-eslint/stylistic',
   ],
   rules: {
-    // JavaScript rules
+    /*
+     * JavaScript rules
+     * @see https://eslint.org/docs/v8.x/rules/
+     */
     'vars-on-top'                             : 2,
     'require-await'                           : 2,
     'prefer-template'                         : 2,
@@ -68,7 +71,10 @@ module.exports = {
     'no-await-in-loop'                        : 2,
     'array-callback-return'                   : 2,
 
-    // Stylistic rules
+    /*
+     * Stylistic rules
+     * @see https://v4.eslint.style/rules
+     */
     '@stylistic/line-comment-position'    : 2,
     '@stylistic/array-bracket-spacing'    : 2,
     '@stylistic/arrow-spacing'            : 2,
@@ -99,8 +105,8 @@ module.exports = {
     '@stylistic/function-paren-newline'        : [2, 'consistent'],
     '@stylistic/implicit-arrow-linebreak'      : 0,
     '@stylistic/linebreak-style'               : [2, 'unix'],
-    '@stylistic/lines-around-comment'          : 2,
-    '@stylistic/multiline-comment-style'       : [2, 'separate-lines'],
+    '@stylistic/lines-around-comment'          : [2, {beforeBlockComment: false}],
+    '@stylistic/multiline-comment-style'       : 2,
     '@stylistic/multiline-ternary'             : [2, 'always-multiline'],
     '@stylistic/object-curly-newline'          : [2, {consistent: true}],
     '@stylistic/object-property-newline'       : [2, {allowAllPropertiesOnSameLine: true}],
@@ -123,7 +129,10 @@ module.exports = {
     '@stylistic/member-delimiter-style'        : [2, {multiline: {delimiter: 'none', requireLast: false}}],
     '@stylistic/padded-blocks'                 : [2, 'never'],
 
-    // TypeScript rules
+    /*
+     * TypeScript rules
+     * @see https://v6--typescript-eslint.netlify.app/rules/
+     */
     '@typescript-eslint/array-type'                             : 2,
     '@typescript-eslint/ban-types'                              : 2,
     '@typescript-eslint/consistent-type-assertions'             : 2,
@@ -203,6 +212,7 @@ module.exports = {
         parser             : '@typescript-eslint/parser',
         extraFileExtensions: ['.vue'],
       },
+      // @see https://eslint.vuejs.org/rules/
       rules: {
         'vue/multi-word-component-names'             : 0,
         'vue/first-attribute-linebreak'              : [2, {singleline: 'beside', multiline: 'beside'}],

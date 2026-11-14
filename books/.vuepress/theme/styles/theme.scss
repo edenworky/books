@@ -1,30 +1,24 @@
-@font-face {
-  font-family: 'Shofar';
-  src: url('../fonts/ShofarRegular.ttf');
-} 
+// colors
+$blue: #1C61C6;
+$indigo: #8338EA;
+$pink: #FF006C;
+$orange: #FB5507;
+$yellow: #FFBF0B;
+$cyan: #38ADB6;
 
-@font-face {
-  font-family: 'Shofar';
-  src: url('../fonts/ShofarRegularOblique.ttf');
-  font-style: italic;
-}
-
-$blue:    #1C61C6;
-$indigo:  #8338EA;
-$pink:    #FF006C;
-$orange:  #FB5507;
-$yellow:  #FFBF0B;
-$cyan:    #38ADB6;
-
+// variables
 $base-font-size: 16px;
+$base-font-family: 'Assistant', sans-serif;
 
+// overrides
 $table-sticky-header-height: 100vh;
 $navbar-background-color: #2B8C96;
 
+@import './fonts';
 @import './3rd-party';
 @import './base';
-@import './print';
-@import './images';
-@import './containers';
 @import './layout';
+@import './containers';
+@import './caption';
 @import './books';
+@import './print';
