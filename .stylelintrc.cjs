@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-magic-numbers */
 module.exports = {
   extends: [
     /*
@@ -33,7 +34,21 @@ module.exports = {
     'no-empty-source'                   : null,
     'selector-pseudo-class-no-unknown'  : [true,
       {ignorePseudoClasses: ['deep']}],
-    'indentation': 2,
 
+    // formatting
+    'indentation'                     : 2,
+    'no-empty-first-line'             : true,
+    'no-eol-whitespace'               : true,
+    'no-extra-semicolons'             : true,
+    'no-missing-end-of-source-newline': true,
+    'color-hex-case'                  : 'upper',
+    'unit-case'                       : 'lower',
+    'property-case'                   : 'lower',
+    'selector-pseudo-class-case'      : 'lower',
+    'selector-pseudo-element-case'    : 'lower',
+    'media-feature-name-case'         : 'lower',
+    'at-rule-name-case'               : 'lower',
+    'string-quotes'                   : 'double',
+    'unicode-bom'                     : 'never',
   },
 }

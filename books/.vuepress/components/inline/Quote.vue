@@ -21,7 +21,7 @@ export default {
   font-style: italic;
 
   &::before, &::after {
-    content: '׳';
+    content: "׳";
   }
 }
 </style>

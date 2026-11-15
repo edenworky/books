@@ -7,7 +7,7 @@
 
   &[data-font="Courier New"] {
     &, code, pre {
-      font-family: 'Courier New', monospace;
+      font-family: "Courier New", monospace;
     }
   }
 }
@@ -26,11 +26,11 @@
 }
 
 .reading-layout {
-  @extend %common-layout; 
+  @extend %common-layout;
 }
 
 .english-reading-layout {
   @extend %common-layout;
-  
+
   direction: ltr;
 }
