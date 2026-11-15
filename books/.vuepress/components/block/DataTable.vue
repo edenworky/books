@@ -151,9 +151,8 @@ export default {
   }
 
   > img {
-    margin-inline: 1em 0;
-
     @media (width <= 768px) {
+      margin-inline: 1em 0;
       max-width: 50% !important;
     }
 
