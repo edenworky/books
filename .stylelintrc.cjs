@@ -1,12 +1,5 @@
-/* eslint-disable @typescript-eslint/no-magic-numbers */
 module.exports = {
-  extends: [
-    /*
-     * @see https://github.com/stylelint/stylelint/blob/15.11.0/docs/user-guide/rules.md
-     * @see https://github.com/stylelint-scss/stylelint-scss/tree/v5.3.2
-     */
-    'stylelint-config-standard-scss',
-  ],
+  extends  : ['stylelint-config-standard-scss'],
   overrides: [
     {
       files       : ['**/*.scss'],
@@ -17,6 +10,10 @@ module.exports = {
       customSyntax: 'postcss-html',
     },
   ],
+  /*
+   * @see https://github.com/stylelint/stylelint/blob/15.11.0/docs/user-guide/rules.md
+   * @see https://github.com/stylelint-scss/stylelint-scss/tree/v5.3.2
+   */
   rules: {
     'declaration-property-value-no-unknown'      : true,
     'media-feature-name-value-no-unknown'        : true,
