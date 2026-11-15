@@ -1,22 +1,15 @@
 <template>
   <section>
     <b-field grouped group-multiline class="column-toggles">
-      <div v-for="(column, index) in columns" :key="index"
-           class="control">
+      <div v-for="(column, index) in columns" :key="index" class="control">
         <b-checkbox v-model="column.visible">{{ column.title }}</b-checkbox>
       </div>
     </b-field>
 
     <div :id="id">
-      <b-table :data="data"
-               :bordered="true"
-               :striped="true"
-               :narrowed="false"
-               :hoverable="true"
-               :focusable="true"
-               :sticky-header="true">
+      <b-table :data="data" bordered striped hoverable focusable sticky-header>
         <b-table-column v-for="(column, index) in columns" :key="index"
-                        :label="column.title + ':'"
+                        :label="`${column.title}:`"
                         :visible="column.visible"
                         :numeric="column.numeric"
                         :centered="column.centered"
@@ -26,11 +19,13 @@
             <div v-if="column.meta && column.meta.type === 'latexImage'"
                  class="field-type-latex-image">
               <Latex :src="props.row[column.field][0]" />
-              <Img :path="props.row[column.field][1]" />
+              <Pic :path="props.row[column.field][1]" />
             </div>
+
             <div v-else-if="column.meta && column.meta.type === 'latex'">
               <Latex :src="props.row[column.field]" />
             </div>
+
             <div v-else>
               {{ props.row[column.field] === null ? '-' : props.row[column.field] }}
             </div>
@@ -63,8 +58,10 @@ export type TableCellValue = string | string[] | null
 export type TableRow = Record<string, TableCellValue>
 
 export default {
+  name: 'DataTable',
+
   props: {
-    id     : {type: String, required: false, default: ''},
+    id     : {type: String, required: false, default: null},
     data   : {type: Array as PropType<TableRow[]>, required: true},
     columns: {type: Array as PropType<TableColumn[]>, required: true},
   },

@@ -6,6 +6,7 @@
   "eslint.format.enable": true,
   "eslint.validate": ["javascript", "typescript", "vue"],
   "eslint.lintTask.enable": true,
+  "eslint.lintTask.options": "--ext .js,.cjs,.ts,.vue .",
   "eslint.options": {
     "extensions": [
       ".js",

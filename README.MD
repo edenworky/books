@@ -13,7 +13,7 @@
 * <Quote quoter="מי אמר">ציטוט בשורה</Quote>
 * # heading
 * ## subheading
-* <Img :path="'path_to_file_in_.vuepress_public_images.ext'"></Img>
+* <Pic path="path_to_file_in_.vuepress_public_images.ext" />
 * [link text](/path-to-md-filename-in-books/#hash)
 * ***נטוי ומודגש***
 

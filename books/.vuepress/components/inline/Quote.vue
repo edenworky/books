@@ -7,6 +7,8 @@
 
 <script lang="ts">
 export default {
+  name: 'Quote',
+
   props: {
     quoter: {
       type   : String,

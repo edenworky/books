@@ -10,8 +10,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-#app .go-to-top {
+<style lang="scss" scoped>
+:deep(.go-to-top) {
   left: 2.5rem;
   right: auto;
 

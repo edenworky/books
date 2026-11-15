@@ -8,18 +8,16 @@
       <template slot="popover"><slot /></template>
     </v-popover>
 
-    <span class="print-footnote-content">&nbsp;[{{ resolvedContent }}]</span>
+    <span class="print-footnote-content">&nbsp;[{{ content }}]</span>
   </span>
 </template>
 
 <script lang="ts">
 export default {
-  name : 'Footnote',
-  props: {
-    content: {type: String, required: false, default: ''},
-  },
+  name: 'Footnote',
+
   computed: {
-    resolvedContent() {
+    content() {
       return this.$slots.default
         ? this.$slots.default
           .map(vNode => vNode.text || '')

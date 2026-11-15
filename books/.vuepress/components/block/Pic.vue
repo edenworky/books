@@ -1,22 +1,24 @@
 <template>
-  <img :class="[
-         { 'disable-zoom': noZoom },
-         { 'print-dont-center': printDontCenter },
-         { 'print-fill': printFill }
-       ]"
-       :src="path ? $withBase('/images/' + path) : url ? url : ''"
+  <img :class="[{
+         'disable-zoom'     : noZoom,
+         'print-dont-center': printDontCenter,
+         'print-fill'       : printFill,
+       }]"
+       :src="path ? $withBase(`/images/${path}`) : url ? url : ''"
        :alt="alt">
 </template>
 
 <script lang="ts">
 export default {
+  name: 'Pic',
+
   props: {
     path           : {type: String, default: ''},
     url            : {type: String, default: ''},
     alt            : {type: String, default: ''},
-    noZoom         : {type: Boolean, default: false},
-    printDontCenter: {type: Boolean, default: false},
-    printFill      : {type: Boolean, default: false},
+    noZoom         : {type: Boolean},
+    printDontCenter: {type: Boolean},
+    printFill      : {type: Boolean},
   },
 }
 </script>

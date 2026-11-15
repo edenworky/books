@@ -12,9 +12,12 @@ const IGNORED_KATEX_ERRORS = new Set([
 ])
 
 export default {
+  name: 'Latex',
+
   props: {
     src: {type: String, required: false, default: null},
   },
+
   computed: {
     katexConfig(): {expression: string; options: KatexOptions} {
       return {

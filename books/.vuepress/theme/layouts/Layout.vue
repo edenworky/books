@@ -4,7 +4,7 @@
 
     <div class="main-container"
          :class="[className, $page.frontmatter.pageClass]"
-         v-bind="{ 'data-font': font }">
+         v-bind="{'data-font': font}">
       <main><Content /></main>
 
       <ScrollToTop />
@@ -13,28 +13,24 @@
 </template>
 
 <script lang="ts">
-import Vue, {type ComponentOptions} from 'vue'
+import Vue from 'vue'
 
 interface LayoutComponent extends Vue {
   font?: string
   className: string
 }
 
-const Layout: ComponentOptions<Vue> = {
-  name : 'Layout',
+export default {
+  name: 'Layout',
+
   props: {
-    className: String,
+    className: {type: String, default: null},
   },
+
   computed: {
     font(this: LayoutComponent): string | null {
       return this.$frontmatter.customFont
     },
   },
 }
-
-export default Layout
 </script>
-
-<style lang="scss">
-@import "../styles/theme";
-</style>

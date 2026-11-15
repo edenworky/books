@@ -2,11 +2,12 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://tevashalem.com/">
-        <Img :path="'david-symbol-transparent.png'" alt="דלת אפס נקודה" no-zoom />טבע שלם
+        <Pic path="david-symbol-transparent.png" alt="דלת אפס נקודה" no-zoom />טבע שלם
       </a>
-      <Link class="navbar-link is-arrowless" :href="'/intro/'">מבוא</Link>
-      <Link class="navbar-link is-arrowless" :href="'/'">ספרים</Link>
+      <Go to="/intro/" class="navbar-link is-arrowless">מבוא</Go>
+      <Go to="/" class="navbar-link is-arrowless">ספרים</Go>
     </div>
+
     <div class="navbar-left">
       <ButtonPrint />
     </div>
@@ -39,6 +40,7 @@ export default {
 
   &:hover, &:focus {
     background-color: initial;
+    color: white;
   }
 }
 

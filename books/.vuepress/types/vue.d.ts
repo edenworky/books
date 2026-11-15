@@ -3,10 +3,12 @@ import {RouterLink, RouterView} from 'vue-router'
 import {BField, BCheckbox, BTable, BTableColumn} from 'buefy/types/components'
 import {KatexOptions} from 'katex'
 import Layout from '../theme/layouts/Layout.vue'
-import Img from '../components/block/Img.vue'
+import Pic from '../components/block/Pic.vue'
 import Latex from '../components/block/Latex.vue'
-import Link from '../components/inline/Link.vue'
+import Go from '../components/inline/Go.vue'
 import ButtonPrint from '../components/layout/ButtonPrint.vue'
+import Navbar from '../components/layout/Navbar.vue'
+import ScrollToTop from '../components/layout/ScrollToTop.vue'
 
 // @see https://floating-vue.starpad.dev/legacy/v2/
 export interface VPopoverProps {
@@ -39,10 +41,12 @@ declare module 'vue' {
     'v-popover': DefineComponent<VPopoverProps>
 
     // 1st-party components
-    'Img': typeof Img
+    'Pic': typeof Pic
     'Latex': typeof Latex
-    'Link': typeof Link
+    'Go': typeof Go
     'ButtonPrint': typeof ButtonPrint
+    'Navbar': typeof Navbar
+    'ScrollToTop': typeof ScrollToTop
   }
 
   export interface GlobalDirectives {

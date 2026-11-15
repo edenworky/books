@@ -8,19 +8,19 @@ customFont: Shofar
 <h1 class="book-title">טבעדינמיקה</h1>
 <h2 class="book-subtitle">הגישה המגשרת</h2>
 
-<span><Link :href="'/derech-hapeima/'">דרך הפעימה</Link></span> היא דרך החיים. דרך הלב.
-היא התפתחה מתוך <Link :href="'/sipur-hayahhid/'">סיפור היחיד</Link> שהוא המסע.
+<span><Go to="/derech-hapeima/">דרך הפעימה</Go></span> היא דרך החיים. דרך הלב.
+היא התפתחה מתוך <Go to="/sipur-hayahhid/">סיפור היחיד</Go> שהוא המסע.
 המסע של האדם הוא להגיע למרכז הלב.
 ולפתוח בו את הנביעה של הקול הפנימי.
-&nbsp;&nbsp;זה <Link :href="'/sod-haiibur/'">סוד העיבור</Link>.
+&nbsp;&nbsp;זה <Go to="/sod-haiibur/">סוד העיבור</Go>.
 עדכאן מתוארים מסעותיה של הנפש ומיכאן המבנה שלה.
 שלש אימות אמש יסודן חיבורי נפש וחיבורי עולם וספר יצירה חק מכריע בינתיים.
-מבנה הנפש מתועד לפרטים ב<Link :href="'/sefer-yetzira/'">ספר יצירה</Link> המיוחס לאברהם אבינו.
-הוא בנוי על מדע תנכ״י כמותי - <Link :href="'/mishvaot-hapeima/'">משוואות הפעימה</Link>
-ואיכותני - <Link :href="'/rosetta-stone/'">ספר האיכויות</Link>.
+מבנה הנפש מתועד לפרטים ב<Go to="/sefer-yetzira/">ספר יצירה</Go> המיוחס לאברהם אבינו.
+הוא בנוי על מדע תנכ״י כמותי - <Go to="/mishvaot-hapeima/">משוואות הפעימה</Go>
+ואיכותני - <Go to="/rosetta-stone/">ספר האיכויות</Go>.
 דרך ארוכה זו נועדה להתמיר משבר לצמיחה
 בכל רבדי החיים של האדם והחברה.
-בזה עוסקת <Link :href="'/slideshow/'">המצגת</Link>.
+בזה עוסקת <Go to="/slideshow/">המצגת</Go>.
 זו הטבעדינמיקה
 
 <div class="page-break"></div>

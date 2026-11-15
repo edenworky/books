@@ -1,5 +1,5 @@
 <script lang="ts">
-import Vue, {type ComponentOptions, type VNode} from 'vue'
+import Vue, {type VNode, PropType} from 'vue'
 import type {PageHeader} from 'vuepress-types'
 
 const HEADING_LEVEL = {
@@ -18,19 +18,19 @@ interface TableOfContentsComponent extends Vue {
   pageContext?: {headers?: PageHeader[]}
 }
 
-const TableOfContents: ComponentOptions<Vue> = {
+export default {
   name: 'TableOfContents',
-
-  props: {
-    includeLevel: {
-      type    : Array,
-      required: false,
-      default : (): number[] => [HEADING_LEVEL.H2, HEADING_LEVEL.H3],
-    },
-  },
 
   inject: {
     pageContext: {default: null},
+  },
+
+  props: {
+    includeLevel: {
+      type    : Array as PropType<number[]>,
+      required: false,
+      default : (): number[] => [HEADING_LEVEL.H2, HEADING_LEVEL.H3],
+    },
   },
 
   computed: {
@@ -89,8 +89,6 @@ const TableOfContents: ComponentOptions<Vue> = {
     return h('div', {class: 'table-of-contents'}, [renderHeaders(this.headers)])
   },
 }
-
-export default TableOfContents
 </script>
 
 <style lang="scss" scoped>

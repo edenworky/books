@@ -12,7 +12,7 @@ layout: ReadingLayout
   <h3>דוד ישראל כהן - יוצר ומורה פעימה</h3>
 </div>
 
-<Img :path="'derech-hapeima/cover.jpg'" alt="כריכת הספר" class="cover-image"></Img>
+<Pic path="derech-hapeima/cover.jpg" alt="כריכת הספר" class="cover-image"/>
 
 <Blockquote><p>'והרוח הייתה לאחד עם הטבע, וההכרה לאחד עם אלוהים'</p></Blockquote>
 
@@ -54,7 +54,7 @@ layout: ReadingLayout
 דוד ישראל כהן.
 תל אביב, ינואר 2018.
 
-<Img :path="'derech-hapeima/david-symbol.jpg'" alt="סמל החיים הסינגולרי" print-dont-center></Img>
+<Pic path="derech-hapeima/david-symbol.jpg" alt="סמל החיים הסינגולרי" print-dont-center/>
 
 <aside><i>האיורים בספר מאת המחבר</i></aside>
 
@@ -116,8 +116,8 @@ layout: ReadingLayout
 של הדיפה,
 של טיפוס לפסגה.
 
-<Img :path="'derech-hapeima/merkavah-arrows.jpg'" alt="תנועה גלית במרכבה - עמק והר"></Img>
-<Img :path="'derech-hapeima/merkavah-body.jpg'" alt="מרכבת האדם"></Img>
+<Pic path="derech-hapeima/merkavah-arrows.jpg" alt="תנועה גלית במרכבה - עמק והר"/>
+<Pic path="derech-hapeima/merkavah-body.jpg" alt="מרכבת האדם"/>
 
 שחרור עולם במקום תפיסת עולם,
 והמקום בו שניהם אחד –
@@ -132,7 +132,7 @@ layout: ReadingLayout
 לכן הספר הזה מוקדש ליצירה הטובה מכולן – <Bigger>לחיים.
 באהבה.</Bigger>
 
-<Img :path="'derech-hapeima/kissing.jpg'" alt="בשר אחד. אהבה"></Img>
+<Pic path="derech-hapeima/kissing.jpg" alt="בשר אחד. אהבה"/>
 
 ### על מילה וספר
 
@@ -194,7 +194,7 @@ layout: ReadingLayout
 
 </Poem>
 
-<Img :path="'derech-hapeima/darwish.jpg'" alt="אדם מודט"></Img>
+<Pic path="derech-hapeima/darwish.jpg" alt="אדם מודט"/>
 
 <Poem>
 
@@ -236,7 +236,7 @@ layout: ReadingLayout
 
 </Poem>
 
-<Img :path="'derech-hapeima/movement.jpg'" alt="עמק פארוואטי"></Img>
+<Pic path="derech-hapeima/movement.jpg" alt="עמק פארוואטי"/>
 
 <Poem>
 
@@ -429,7 +429,7 @@ layout: ReadingLayout
 <template #quoter>צ'נג מאן-צ'ינג</template>
 </Blockquote>
 
-<Img :path="'derech-hapeima/paradoxality.jpg'" alt="נוף העמק מהכפר טוש"></Img>
+<Pic path="derech-hapeima/paradoxality.jpg" alt="נוף העמק מהכפר טוש"/>
 
 <Poem>
 
@@ -620,7 +620,7 @@ layout: ReadingLayout
 
 </Poem>
 
-<Img :path="'derech-hapeima/drainage-divide.jpg'" alt="הרי הקאצ׳קר"></Img>
+<Pic path="derech-hapeima/drainage-divide.jpg" alt="הרי הקאצ׳קר"/>
 
 # פרק ב׳ - הר. חזרה למציאות
 
@@ -629,7 +629,7 @@ layout: ReadingLayout
 שהקדוש שותה מהם'</p>
 </Blockquote>
 
-<Img :path="'derech-hapeima/mountain.jpg'" alt="שגעון הקדושה"></Img>
+<Pic path="derech-hapeima/mountain.jpg" alt="שגעון הקדושה"/>
 
 <Blockquote>
 <p>'רעם חוזר ומופיע –<br/>
@@ -656,7 +656,7 @@ layout: ReadingLayout
 
 </Poem>
 
-<Img :path="'derech-hapeima/classification.jpg'" alt="תודעה מחוץ לקופסא"></Img>
+<Pic path="derech-hapeima/classification.jpg" alt="תודעה מחוץ לקופסא"/>
 
 <Poem>
 
@@ -690,7 +690,7 @@ layout: ReadingLayout
 
 </Poem>
 
-<Img :path="'derech-hapeima/sanity.jpg'" alt="גן עדן, הנחש והפרי האסור"></Img>
+<Pic path="derech-hapeima/sanity.jpg" alt="גן עדן, הנחש והפרי האסור"/>
 
 <Poem>
 
@@ -796,7 +796,7 @@ layout: ReadingLayout
 
 </Poem>
 
-<Img :path="'derech-hapeima/forcefulness.jpg'" alt="להיות עצמך" print-fill></Img>
+<Pic path="derech-hapeima/forcefulness.jpg" alt="להיות עצמך" print-fill/>
 
 # פרק ג׳ - דרך. סינתזה
 
@@ -929,7 +929,7 @@ layout: ReadingLayout
 
 </Poem>
 
-<Img :path="'derech-hapeima/west.jpg'" alt="לראות בעיניים עצומות"></Img>
+<Pic path="derech-hapeima/west.jpg" alt="לראות בעיניים עצומות"/>
 
 <Poem>
 
@@ -1057,7 +1057,7 @@ layout: ReadingLayout
 
 </Poem>
 
-<Img :path="'derech-hapeima/disentanglement.jpg'" alt="מלאכת התרה"></Img>
+<Pic path="derech-hapeima/disentanglement.jpg" alt="מלאכת התרה"/>
 
 ## זוויות
 
@@ -1146,7 +1146,7 @@ layout: ReadingLayout
 
 </Poem>
 
-<Img :path="'derech-hapeima/caressing.jpg'" alt="שלוות השינה"></Img>
+<Pic path="derech-hapeima/caressing.jpg" alt="שלוות השינה"/>
 
 <Poem>
 
@@ -1178,7 +1178,7 @@ layout: ReadingLayout
 
 </Poem>
 
-<Img :path="'derech-hapeima/filipe.jpg'" alt="עדיין הוא צוחק"></Img>
+<Pic path="derech-hapeima/filipe.jpg" alt="עדיין הוא צוחק"/>
 
 ## נווה מדבר
 
@@ -1280,7 +1280,7 @@ layout: ReadingLayout
 
 </Poem>
 
-<Img :path="'derech-hapeima/nostalgia.jpg'" alt="טל זכה כטל"></Img>
+<Pic path="derech-hapeima/nostalgia.jpg" alt="טל זכה כטל"/>
 
 # פרק ד׳ - פעימה. סינרגיה
 
@@ -1436,7 +1436,7 @@ layout: ReadingLayout
 
 ### מיפוי מרכבה אישי, מטאפיזיקה
 
-<Img :path="'derech-hapeima/merkavah-personal.jpg'" alt="מיפוי מרכבה אישי"></Img>
+<Pic path="derech-hapeima/merkavah-personal.jpg" alt="מיפוי מרכבה אישי"/>
 
 <Poem>
 
@@ -1652,7 +1652,7 @@ layout: ReadingLayout
 <small><a href="https://www.facebook.com/hapeima/" target="_blank">'בי"ס פעימה'</a> ללימוד אומנות הפעימה והדרכה בתחום רפואת הנפש, הוקם על ידי דוד ישראל כהן. בית הספר מהווה את הכח החי בשטח של היצירה הרב תחומית 'מעשה מרכבה'.</small>
 <small>על פי המסורת, המרכבה בנויה מ-32 (ל"ב) איכויות שורשיות במבנה אשר מתאר יחידה של קיום. כל איכות היא מימד או ציר בעל קטבים, והיא מרחב המתפשט ומתכווץ (פועם). כל איכות מסומנת על ידי אות או ספרה. כל הרכבי האותיות אפשריים. מכאן שהל"ב פועם, מכאן ש'מעשה המרכבה' הוא פעימה.</small>
 
-<Img :path="'derech-hapeima/david.jpg'" alt="חוף מבטחים"></Img>
+<Pic path="derech-hapeima/david.jpg" alt="חוף מבטחים"/>
 
 ### פעימה
 

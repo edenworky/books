@@ -1,6 +1,7 @@
 <template>
   <main>
     <h1>לא נמצא</h1>
+
     <router-link to="/">שוב למקום.</router-link>
   </main>
 </template>

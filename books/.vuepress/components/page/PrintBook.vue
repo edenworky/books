@@ -20,10 +20,12 @@ const PRINT_CONFIG = {
 }
 
 export default {
-  name      : 'PrintBook',
+  name: 'PrintBook',
+
   components: {
     PageContainer,
   },
+
   computed: {
     orderedPages() {
       const customOrder = [
@@ -44,8 +46,9 @@ export default {
         .filter(path => path !== undefined)
     },
   },
+
   mounted() {
-    this.$nextTick(() => {
+    this.$nextTick().then(() => {
       const triggerPrintWhenReady = async() => {
         await this.waitForContentLoaded()
 
@@ -68,6 +71,7 @@ export default {
       triggerPrintWhenReady()
     })
   },
+
   methods: {
     getPageClasses(page: PageComputed) {
       const classes = ['print-book']
@@ -88,6 +92,7 @@ export default {
 
       return classes
     },
+
     waitForContentLoaded() {
       return new Promise((resolve) => {
         setTimeout(resolve, PRINT_CONFIG.LOAD_TIMEOUT_MS)

@@ -1,14 +1,16 @@
 <template>
-  <button class="print-button" @click="onClick">🖨️</button>
+  <button type="button" class="print-button" @click="onClick">🖨️</button>
 </template>
 
 <script lang="ts">
 export default {
-  name   : 'ButtonPrint',
+  name: 'ButtonPrint',
+
   methods: {
     isHome() {
       return this.$page.path === '/'
     },
+
     onClick() {
       if (process.env.NODE_ENV === 'development') {
         this.triggerPrint()
@@ -16,6 +18,7 @@ export default {
         this.triggerPdf()
       }
     },
+
     triggerPrint() {
       if (this.isHome()) {
         this.$router.push('/tevadynamica/')
@@ -23,6 +26,7 @@ export default {
         window.print()
       }
     },
+
     triggerPdf() {
       if (this.isHome()) {
         window.location.href = this.$withBase('/pdfs/tevadynamica.pdf')
