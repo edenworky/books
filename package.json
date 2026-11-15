@@ -1,7 +1,6 @@
 {
   "name": "tevadynamica",
   "description": "מערכת יחסים מופלאה, יחידה וקדושה, של הקליפות עם הלב. של האור ההולך וחוזר",
-  "main": "index.js",
   "private": true,
   "type": "module",
   "scripts": {
