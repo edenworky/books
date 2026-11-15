@@ -1,18 +1,33 @@
 <template>
-  <div v-katex="{
-    expression: src || '-',
-    options: {
-      throwOnError: true, displayMode: true,
-      strict: errorCode => ['newLineInDisplayMode', 'symbolNotInFont', 'unknownSymbol']
-        .includes(errorCode) ? 'ignore' : 'warn',
-    }
-  }" />
+  <div v-katex="katexConfig" />
 </template>
 
 <script lang="ts">
+import {KatexOptions} from 'katex'
+
+const IGNORED_KATEX_ERRORS = new Set([
+  'newLineInDisplayMode',
+  'symbolNotInFont',
+  'unknownSymbol',
+])
+
 export default {
   props: {
-    src: {type: String, required: false, default: '-'},
+    src: {type: String, required: false, default: null},
+  },
+  computed: {
+    katexConfig(): {expression: string; options: KatexOptions} {
+      return {
+        expression: this.src || '-',
+        options   : {
+          throwOnError: true,
+          displayMode : true,
+          strict      : (errorCode: string) => {
+            return IGNORED_KATEX_ERRORS.has(errorCode) ? 'ignore' : 'warn'
+          },
+        },
+      }
+    },
   },
 }
 </script>

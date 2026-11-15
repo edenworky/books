@@ -2,8 +2,7 @@
   <span>
     <v-popover placement="top-end"
                trigger="click"
-               :container="false"
-               :content="$slots.default">
+               :container="false">
       <sup class="tooltip tooltip-target">*</sup>
 
       <template slot="popover"><slot /></template>

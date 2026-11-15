@@ -11,24 +11,12 @@
 </template>
 
 <script lang="ts">
-import type {Component} from 'vue'
+import {PageComputed} from 'vuepress-types'
+import PageContainer from './PageContainer.vue'
 
 const PRINT_CONFIG = {
   LOAD_TIMEOUT_MS: 3000,
   SETTLE_DELAY_MS: 1000,
-}
-
-const PageContainer: Component = {
-  name : 'PageContainer',
-  props: ['page'],
-  provide() {
-    return {
-      pageContext: this.page,
-    }
-  },
-  render(h) {
-    return h('div', this.$slots.default)
-  },
 }
 
 export default {
@@ -53,7 +41,7 @@ export default {
 
       return customOrder
         .map(path => this.$site.pages.find(p => p.path === path))
-        .filter(Boolean)
+        .filter(path => path !== undefined)
     },
   },
   mounted() {
@@ -81,7 +69,7 @@ export default {
     })
   },
   methods: {
-    getPageClasses(page) {
+    getPageClasses(page: PageComputed) {
       const classes = ['print-book']
       if (!page.frontmatter) return classes
 

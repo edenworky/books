@@ -4,7 +4,7 @@
 
     <div class="main-container"
          :class="[className, $page.frontmatter.pageClass]"
-         :data-font="font">
+         v-bind="{ 'data-font': font }">
       <main><Content /></main>
 
       <ScrollToTop />
@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import type Vue, {ComponentOptions} from 'vue'
+import Vue, {type ComponentOptions} from 'vue'
 
 interface LayoutComponent extends Vue {
   font?: string
